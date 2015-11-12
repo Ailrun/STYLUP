@@ -1,0 +1,533 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width" />
+        <title>
+        Stylup
+        </title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!--
+<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
+<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
+-->
+
+<style type="text/css">
+<!--
+		html{
+    	-ms-content-zooming: none;
+		}
+	
+		body 
+		{ 
+	  		width:640px;
+		    height: 100%; 
+		    margin: 0; 
+		    padding: 0 ;
+		    border: 0 none;
+		    position:fixed;
+		}
+	-->
+	
+	
+	html, body {
+width:100%;
+height: 100%;
+margin: 0px;
+padding: 0px;
+}
+	
+	
+		
+		.img
+		{
+		    
+			padding:0px;
+			margin:0px;
+			border-style:solid;
+			border-width:0px;
+			border-collapse:collapse;
+			
+		}
+
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0);
+    background-color: transparent;
+
+		-webkit-scrollbar {
+		    width: 0px;
+		}     
+
+		-webkit-scrollbar-track {
+		    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.0); 
+		    -webkit-border-radius: 0px;
+		    border-radius: 0px;
+		}     
+
+		-webkit-scrollbar-thumb {
+		    -webkit-border-radius: 0px;
+		    border-radius: 0px;
+		    background: rgba(0,0,0,0.0); 
+		    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.0); 
+		}
+
+		-webkit-scrollbar-thumb:window-inactive {
+		    background: rgba(0,0,0,0.0); 
+		}
+
+
+
+		
+		-webkit-scrollbar {
+		    width: 0px;
+		}     
+
+		-webkit-scrollbar-track {
+		    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.0); 
+		    -webkit-border-radius: 0px;
+		    border-radius: 0px;
+		}     
+
+		-webkit-scrollbar-thumb {
+		    -webkit-border-radius: 0px;
+		    border-radius: 0px;
+		    background: rgba(0,0,0,0.0); 
+		    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.0); 
+		}
+
+		-webkit-scrollbar-thumb:window-inactive {
+		    background: rgba(0,0,0,0.0); 
+		}
+		
+		
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) ; 
+    -webkit-focus-ring-color: rgba(0, 0, 0, 0) ; 
+    
+    outline: none ;
+   
+
+/*
+-webkit-transition: none;
+-moz-transition: none;
+-o-transition: none;
+-ms-transition: none;
+transition: none;
+*/
+ 
+</style>
+</head>
+
+<body style="margin: 0; padding: 0;height;100%;width:640px;">
+
+<!--
+<div style="position:fixed;z-index:5;left:0;top:0;width:640px;height:80px;box-shadow:0px 5px 5px #505050;padding:0px;margin:0px;">
+-->
+            <table style="position:fixed;z-index:5;top:0;left:0;width:640px;;height:80px;background-color:#ffffff;padding:0px;margin:0px;" cellpadding="0px" cellspacing="0px">
+            	<tr>
+            		<td id="back_button_cell" style="width:80px;color:#000000;font-size:30px;text-align:center;" onclick="page_back();">
+            		<
+            		</td>
+            		<td style=";color:#000000;font-size:30px;text-align:center;" onclick="load_alert('test string');">
+            		StylUp
+            		</td>
+            		<td style="width:80px;color:#000000;font-size:30px;">
+            		&nbsp;
+            		</td>
+            	</tr>
+            </table>
+<!--
+</div>
+-->
+
+<table id="main_table" style="width:640px;" cellpadding="0px" cellspacing="0px">
+<!--
+    <tr>
+        <td style="height:80px;font-size:11pt;text-align:center;background-color:#ffffff;border-color:#aaaaaa;border-width:0px;border-collapse:collapse;">
+            
+            <table style="width:640px;;height:80px;border-style:solid;border-width:0px;border-collapse:collapse;" cellpadding="0px" cellspacing="0px">
+            	<tr>
+            		<td id="back_button_cell" style="width:80px;background-color:#ffffff;color:#000000;font-size:30px;" onclick="goto_prev_page();">
+            		<
+            		</td>
+            		<td style="width:%;background-color:#ffffff;color:#000000;font-size:30px;" onclick="load_alert('test string');">
+            		StylUp
+            		</td>
+            		<td style="width:80px;background-color:#ffffff;color:#000000;font-size:30px;">
+            		&nbsp;
+            		</td>
+            	</tr>
+            </table>
+            
+            
+        </td>
+    </tr>
+-->
+    <tr style="background-color:#ffffff;">
+        <td id="content_panel" style="height:%;font-size:11px;background-color:#ffff00;vertical-align:top;valign:top;overflow-y:hidden;border-style:solid;border-width:1px;border-color:#0000ff;border-collapse:collapse;">
+
+<div id="content_div"  style="margin-top:80px;font-size:11px;background-color:#ffff00;vertical-align:top;valign:top;overflow-y:scroll;" >
+
+test<br />test<br />test<br />test<br />test?<br />test<br />test<br />test<br />test<br />testX<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />testX<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />testX<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />testX<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />testX<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />testX<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />testX<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />testX<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />testX<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />testX<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />testX<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+
+
+
+
+
+</div>
+
+        </td>
+    </tr>
+
+   
+</table>
+            <table style="position:fixed;z-index:5;left:0;bottom:0;width:640px;;height:100px;" cellpadding="0px" cellspacing="0px">
+            	<tr>
+            		<td style="width:33%;background-color:#ff0000;color:#ffffff;text-align:center;">
+            		HOME
+            		</td>
+            		<td style="width:34%;background-color:#00ff00;color:#000000;text-align:center;">
+            		PS
+            		</td>
+            		<td style="width:33%;background-color:#0000ff;color:#ffffff;text-align:center;">
+            		ME
+            		</td>
+            	</tr>
+            </table>  
+
+
+<div id="content_buffer" style="width:640px;height:100%;overflow-x:hidden;overflow-y:scroll;background-color:#ffffff;color:#505050;position:absolute;z-index:1;display:none;">
+&nbsp;
+</div>
+
+<div id="alert_panel" style="width:640px;;height:100%;overflow:hidden;background-image:url('/app/img/popup_panel_bg.png');color:#505050;position:fixed;left:0;top:0;z-index:10;display:none;text-align:center;valign:middle;vertical-align:center;">
+<table style="width:640px;height:100%;font-size:30px;color:#ffffff;border-style:solid;border-width:0px;border-collapse:collapse;" cellpadding="0px" cellspacing="0px">
+    <tr>
+        <td style="width:100%;height:%;text-align:center;valign:center;vertical-align:middle">
+        &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td id="alert_panel_content" style="width:100%;height:50px;text-align:center;valign:center;vertical-align:middle">
+        </td>
+    </tr>
+    <tr>
+        <td style="width:100%;height:50px;text-align:center;valign:center;vertical-align:middle">
+        &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td style="width:100%;height:50px;text-align:center;valign:center;vertical-align:middle" onclick="$('#alert_panel').hide();">
+        OK
+        </td>
+    </tr>
+    <tr>
+        <td style="width:100%;height:%;text-align:center;valign:center;vertical-align:middle">
+        &nbsp;
+        </td>
+    </tr>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<div id="app_version_alert" style="display:none;">
+    
+    <table style="width:500px;color:#ffffff;border-style:solid;border-width:0px;border-collapse:collapse;margin:0 auto;" cellpadding="0px" cellspacing="0px">
+        <tr>
+            <td style="height:30px;font-size:12px;text-align:center;">
+                App Framework 1.0
+            </td>
+        </tr>
+        <tr>
+            <td style="height:30px;font-size:12px;text-align:center;">
+                &nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td style="height:60px;font-size:12px;text-align:center;">
+                Hybrid App<br />
+                Framework Version 1.0
+            </td>
+        </tr>
+        <tr>
+            <td style="height:30px;font-size:12px;text-align:center;" onclick="unload_alert();">
+               OK
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:150px;font-size:12px;text-align:center;">
+                &nbsp;&nbsp;
+            </td>
+        </tr>
+    </table>
+    
+</div>
+
+
+
+
+<div id="page_load_error_alert" style="display:none;">
+    
+    <table style="width:500px;color:#ffffff;border-style:solid;border-width:0px;border-collapse:collapse;margin:0 auto;" cellpadding="0px" cellspacing="0px">
+        <tr>
+            <td style="height:30px;font-size:12px;text-align:center;">
+                App Alert
+            </td>
+        </tr>
+        <tr>
+            <td style="height:30px;font-size:12px;text-align:center;">
+                &nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td style="height:60px;font-size:12px;text-align:center;">
+                Unable to load.....<br />
+                Please check your Internet connection.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:150px;font-size:12px;text-align:center;">
+                &nbsp;&nbsp;
+            </td>
+        </tr>
+    </table>
+    
+</div>
+
+<div id="title_logo" style="width:640px;height:100%;position:fixed;left:0;top:0;background-color:#ffffff;z-index:10;">
+<table style="width:640px;height:100%;border-style:solid;border-width:0px;border-collaps:collapse;" cellpadding="0px" cellspacing="0px">
+	<tr>
+		<td style="height:%;text-align:center;valign:middle;vertical-align:center;">
+		<img src="img/logo.png" />
+		</td>
+	</tr>
+	<tr>
+		<td style="height:100px;">
+		&nbsp;
+		</td>
+	</tr>
+</table>
+</div>
+
+
+
+<input type="hidden" id="app_token" value="testtoken">
+
+
+
+ 
+<script language="javascript">
+    
+    // Interaction flag to prevent interaction during navigation & transition operation.
+ //   var flag_interaction = true;
+   // var nav_stack = [];
+    
+
+/*
+   $(document).ready(function()
+   {
+   
+     
+       var v_width = window.screen.width / window.devicePixelRatio;
+       
+       var r_ratio = 1.0 / window.devicePixelRatio;
+       r_ratio = window.screen.width / 640.0;//640.0 * r_ratio;
+       $('body').css({zoom:r_ratio});
+       
+       
+ 
+   
+       //nav_stack = [];
+      // load_content('home');
+       alert("354");
+      // return;
+ 
+	}
+
+*/
+
+
+
+
+$( document ).ready(function() {
+
+
+
+       var v_width = window.screen.width / window.devicePixelRatio;
+       //var v_height = window.screen.height;
+       //$('body').css("height",v_height+"px");
+       
+       
+       
+       
+       var r_ratio = 1.0 / window.devicePixelRatio;
+       r_ratio = window.screen.width / 640.0;//640.0 * r_ratio;
+       $('body').css({zoom:r_ratio});
+       
+     //  alert($(document).height());
+     $("#content_div").css("height",($(document).height()-180)+"px");
+       
+    
+       //alert($("body").css("height"));
+       
+    //alert( "ready! 359" );
+    
+    
+    setTimeout(function() {
+			$("#title_logo").hide();
+			load_content('home.php');
+		}, 3000);
+    
+    
+    
+    
+});
+
+
+
+
+
+
+
+
+
+function goto_prev_page()
+{
+
+	alert("back to prev page");
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    function load_content(content_url)
+    {
+  
+    	var tc = new Date().getTime();
+    	
+    	var app_data = {"data":"none"};  	
+
+
+        $.ajax({
+           type:"POST",
+           url:"http://1.246.220.139/app/android/"+content_url,
+           data:app_data,
+           success : function(data)
+           {
+           
+				//result = $.trim(data);
+				
+				
+				alert(data);
+				
+				/*
+				
+				if( result(0,2) == 'OK' )
+				{
+					alert(result.substr(0,result.length-3));
+				}
+				*/
+               
+           },
+
+
+           error:function(err)
+           {  
+            alert();  
+        	}
+
+     });
+        
+    }
+   
+
+
+
+
+
+</script>
+    
+</body>
+</html>
+
+<!-- AIzaSyBLS_hyRRKgx7QTMod34wJPpZxj7v4-yO4 -->
+<!-- 594944014135 -->
+
+
+
+
+
+
+
+
+
+
+
+
+

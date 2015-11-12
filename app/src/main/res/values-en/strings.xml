@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">STYL UP</string>
+    <string name="app_exit_announce">Please click again to exit</string>
+    <string name="google_play_service_fail">Can\'t connect with Google Play</string>
+
+</resources>
